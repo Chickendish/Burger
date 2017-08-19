@@ -4,8 +4,7 @@ CREATE DATABASE burgers_db;
 USE burgers_db;
 CREATE TABLE products (
   id INT NOT NULL AUTO_INCREMENT,
-  flavor VARCHAR(45) NULL,
-  price DECIMAL(10,2) NULL,
-  quantity INT NULL,
+  burger_name VARCHAR(100) NULL,
+  devoured BOOLEAN DEFAULT FALSE,
   PRIMARY KEY (id)
 );
