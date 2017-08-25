@@ -28,9 +28,10 @@ var Burger = sequelize.define("burger", {
     type: Sequelize.BOOLEAN,
     allowNull: false,
     defaultValue: false
-  }, {
-  timestamps: false
-  }
+  },
+  createdAt: Sequelize.DATE,
+  updatedAt: Sequelize.DATE,
+
    });
 
 // Syncs with DB
