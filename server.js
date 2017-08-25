@@ -10,7 +10,7 @@ const express = require("express");
 // 				Set up the server
 //*************************************************
  const app = express();
- const PORT = process.env.PORT || 8080;
+ const PORT = 8080;
 
  // Requiring models for syncing
 //var db = require("./models");
@@ -34,8 +34,8 @@ app.set("view engine", "handlebars");
 //*************************************************
 
 app.get("/", function(req,res){
-
-})
+ 	res.render("index", xxxx)
+ })
 
 
 //*************************************************
