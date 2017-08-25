@@ -5,6 +5,7 @@
 const override = require ("method-override");
 const bodyParser = require ("body-parser");
 const express = require("express");
+const BurgerRoutes = require('./controllers/burgers_controller');
 
 //*************************************************
 // 				Set up the server
@@ -32,10 +33,11 @@ app.set("view engine", "handlebars");
 //*************************************************
 // 				Routes
 //*************************************************
+app.use('/', BurgerRoutes);
 
-app.get("/", function(req,res){
- 	res.render("index", xxxx)
- })
+// app.get('/', (req, res) => {
+// res.render('index', { view_burgers: [{ name: 'fake-0', }, { name: 'fake-01', }, ], });
+// });
 
 
 //*************************************************
