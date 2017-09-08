@@ -19,7 +19,7 @@ var Burger = sequelize.define("burger", {
     autoIncrement: true,
     primaryKey: true
   },
-  name: {
+  burger_name: {
     type: Sequelize.STRING,
     allowNull: false,
     validate: {isAlphanumeric: true}
@@ -29,6 +29,7 @@ var Burger = sequelize.define("burger", {
     allowNull: false,
     defaultValue: false
   },
+
   createdAt: Sequelize.DATE,
   updatedAt: Sequelize.DATE,
 

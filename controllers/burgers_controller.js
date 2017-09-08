@@ -13,9 +13,9 @@ const router = Express.Router();
 //            of the Express object
 //****************************************************
 
-router.get('/', (req, res) => {
+router.get('/', function (req, res) {
   // retrieve all burgers from the database
-  Burger.findAll({}).then((dbRes) => {
+  Burger.findAll({}).then(function(dbRes){
     const hbsObject = { view_burgers: dbRes, };
 
     // send them back along with  the index/main template
@@ -26,7 +26,7 @@ router.get('/', (req, res) => {
 });
 
 // when a user makes a post request to the new route
-router.post('/new', (req, res) => {
+router.post('/new', function (req, res) {
   const userBurger = req.data;
 
   // create new buger
@@ -35,7 +35,7 @@ router.post('/new', (req, res) => {
 
   res.render('index', { view_burgers: dbRes, });
 
-  // do separate stuff to create a new burge
+  // do separate stuff to create a new burger
 });
 
 router.post('/eat', (req, res) => {
