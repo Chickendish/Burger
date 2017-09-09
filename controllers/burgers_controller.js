@@ -5,13 +5,14 @@
 const Express = require('express');
 const Burger = require('../models/burger');
 
+//****************************************************
+//         Use the Router() method of Express to 
+//          set routes for requests and posts
+//****************************************************
+
 const router = Express.Router();
 
 // when a user makes a get request to all/homepage
-//****************************************************
-//         Sets the routes using the Router() method 
-//            of the Express object
-//****************************************************
 
 router.get('/', function (req, res) {
   // retrieve all burgers from the database

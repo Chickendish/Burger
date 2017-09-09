@@ -43,7 +43,7 @@ app.set("view engine", "handlebars");
 //*************************************************
 
 app.get('/', function(req, res){
-	res.render('index', {view_burgers: [{name: 'fake-0'},{fake-01}]})
+	res.render('index', {view_burgers: [{name: 'fake01'},{name: 'fake02'}, {name:'fake03'}]})
 })
 
 //*************************************************
